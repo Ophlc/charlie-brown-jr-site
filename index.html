@@ -1,98 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Charlie Brown Jr - História</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <div class="overlay"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlie Brown Jr. - História da Banda</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontes do Google (Rock Salt é estilo punk/skate) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <!-- Cabeçalho com-banner -->
+    <header class="main-header">
+        <div class="header-content">
             <h1>Charlie Brown Jr.</h1>
-            <p>A história da maior banda de rock skate do Brasil</p>
-        </header>
+            <p class="subtitle">A lenda do Skate Rock Nacional</p>
+        </div>
+    </header>
 
-        <section class="historia">
-            <h2>História da Banda</h2>
-
-            <div class="logos">
-                <img src="logo1.jpg">
-                <img src="logo2.jpg">
+    <main>
+        <!-- Seção História -->
+        <section class="section-box">
+            <h2 class="section-title">A História</h2>
+            
+            <div class="gallery-logos">
+                <!-- Mantenha as imagens originais aqui -->
+                <img src="logo1.jpg" alt="Logo Antigo">
+                <img src="logo2.jpg" alt="Logo Novo">
             </div>
 
-            <p>
-                A banda Charlie Brown Jr. surgiu em 1992 na cidade de Santos, em São Paulo.
-                Fundada por Chorão, o grupo misturava rock, rap, reagge e skate punk,
-                criando um estilo único que marcou gerações.
-            </p>
-
-            <p>
-            Com letras que falavam sobre amizade, superação, críticas socias e 
-            vivências da juventude, a banda conquistou rapidamente o Brasil.
-            A atitude skatista sempre esteve presente, tanto na estética quanto
-            na mensagem transmitida na músicas.
-            </p>
-
-            <p>
-                Ao longo dos anos, a banda lançou diversos sucesso que tornaram
-                verdadeiros hinos para os fãs. Charlie Brown Jr. se consolidou como
-                uma das maiores banda de rock nacional.
-            </p>
+            <article class="text-content">
+                <p>
+                    A banda <strong>Charlie Brown Jr.</strong> surgiu em 1992 na cidade de Santos, São Paulo.
+                    Fundada por Chorão, o grupo misturava rock, rap, reggae e skate punk,
+                    criando um estilo único que marcou gerações inteiras.
+                </p>
+                <p>
+                    Com letras que falavam sobre amizade, superação, críticas sociais e 
+                    vivências da juventude, a banda conquistou rapidamente o Brasil.
+                    A atitude skatista sempre estuvo presente, tanto na estética quanto
+                    na mensagem transmitida nas músicas.
+                </p>
+                <p>
+                    Ao longo dos anos, a banda lançou diversos inúmerose que se tornaram
+                    verdadeiros hinos. Charlie Brown Jr. se consolidou como
+                    uma das maiores bandas de rock nacional.
+                </p>
+            </article>
         </section>
 
-        <section class="integrantes">
-            <h2>Pincipais integrantes</h2>
-
-            <div class="card">
-
+        <!-- Seção Integrantes -->
+        <section class="section-box">
+            <h2 class="section-title">Principais Integrantes</h2>
+            
+            <div class="cards-grid">
+                <!-- Card 1 -->
                 <div class="card">
-                    <img src="chorao.jpg">
+                    <div class="image-container">
+                        <img src="chorao.jpg" alt="Chorão">
+                    </div>
                     <h3>Chorão</h3>
-                    <p>Vocalista e fundador da banda.</p>
+                    <p>Vocalista e fundador.</p>
                 </div>
 
+                <!-- Card 2 -->
                 <div class="card">
-                    <img src="champignon.jpg">
+                    <div class="image-container">
+                        <img src="champignon.jpg" alt="Champignon">
+                    </div>
                     <h3>Champignon</h3>
-                    <p>Bixista e vocal de apoio.</p>
+                    <p>Baixista e vocal de apoio.</p>
                 </div>
 
+                <!-- Card 3 -->
                 <div class="card">
-                    <img src="thiago.jpg">
+                    <div class="image-container">
+                        <img src="thiago3.jpg" alt="Thiago Castanho">
+                    </div>
                     <h3>Thiago Castanho</h3>
-                    <p>Guitarrista marcante do grupo.</p>
+                    <p>Guitarrista marcante.</p>
                 </div>
-
             </div>
         </section>
 
-        <section class="albuns">
-            <h2>Principais Álbuns</h2>
-
-            <div class="cards">
-
-                <div class="card">
-                    <img src="imunidade.jpg">
+        <!-- Seção Discografia -->
+        <section class="section-box">
+            <h2 class="section-title">Discografia Principal</h2>
+            
+            <div class="cards-grid">
+                <div class="card album-card">
+                    <img src="imunidade.jpg" alt="Imunidade Musical">
                     <h3>Imunidade Musical</h3>
                 </div>
 
-                <div class="card">
-                    <img src="preco.jpg">
+                <div class="card album-card">
+                    <img src="preco.jpg" alt="Preço Curto...">
                     <h3>Preço Curto... Prazo Longo</h3>
                 </div>
 
-                <div class="card">
-                    <img src="transpiracao.jpg">
-                    <h3>Transpiração Contínua Prolongada</h3>
+                <div class="card album-card">
+                    <img src="transpiracao.jpg" alt="Transpiração Contínua">
+                    <h3>Transpiração Contínua</h3>
                 </div>
-
             </div>
         </section>
+    </main>
 
-        <footer>
-            <p>Site criado po Pedro Henrique, em homenagem ao Charlie Brown Jr.</p>
-        </footer>
-        
-    </body>
+    <footer>
+        <p>Site criado por Pedro Henrique, em homenagem ao Charlie Brown Jr.</p>
+    </footer>
+
+</body>
 </html>
