@@ -1,165 +1,195 @@
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --bg-color: #0a0a0a;      /* Preto profundo */
+    --card-bg: #141414;       /* Cinza escuro para cartões */
+    --text-color: #ffffff;   /* Branco puro */
+    --accent-red: #ff0033;    /* Vermelho vivo (sangue/skate) */
+    --font-title: 'Rock Salt', cursive;
+    --font-body: 'Verdana', sans-serif; /* Fonte padrão anos 2000 */
+}
+
 body {
-    font-family: Arial, sans-serif;
-    color: white;
-    background-image: url(banda.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    /* Uma textura sutil de ruído (opcional, dá um ar analógico) */
+    background-image: url('banda.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.overlay {
-    background: rgba(0, 0, 0, 7);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-}
-
-header {
-    position: relative;
+/* ---------------- HEADER ---------------- */
+.main-header {
+    background: linear-gradient(to bottom, #000000, #1a0000);
     text-align: center;
-    padding: 150px 20px;
+    padding: 80px 20px;
+    border-bottom: 4px solid var(--accent-red);
 }
 
-header h1 {
-    font-family: 'Rock Salt', cursive;
-    font-size: 50px;
-    animation: fadeIn 2s ease-in-out;
+.main-header h1 {
+    font-family: var(--font-title);
+    font-size: 60px;
+    color: var(--text-color);
+    text-shadow: 4px 4px 0px var(--accent-red); /* Sombra estilo quadrinho */
+    letter-spacing: 2px;
 }
 
-header p {
-    margin-top: 20px;
-    font-size: 20px;
-    animation: fadeIn 3s ease-in-out;
+.main-header .subtitle {
+    font-size: 1.2rem;
+    color: #aaa;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-section {
-    background: rgba(0, 0, 0, 0.85);
-    padding: 60px 20px;
+/* ---------------- LAYOUT GERAL ---------------- */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-h2 {
-    text-align: center;
+.section-box {
+    background: var(--card-bg);
+    padding: 40px;
     margin-bottom: 40px;
-    font-size: 32px;
-    color: #00ff88;
+    border: 1px solid #333;
+    /* Efeito "brilho" sutil nas bordas */
+    box-shadow: 0 0 10px rgba(255, 0, 51, 0.1);
 }
 
-.historia p {
-    max-width: 900px;
-    margin: 20px auto;
-    font-size: 18px;
-    line-height: 1.7;
+.section-title {
+    font-family: var(--font-title);
+    color: var(--accent-red);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    background: #000;
+    display: inline-block;
+    padding: 5px 20px;
+    border: 2px solid var(--accent-red);
+    position: relative;
+    top: 20px; /* Deixa o título "flutuar" */
 }
 
-.logo {
+/* Centraliza a section因為 o título flutua */
+.section-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ---------------- HISTÓRIA ---------------- */
+.text-content p {
+    font-size: 1.1rem;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.gallery-logos {
     display: flex;
     justify-content: center;
     gap: 30px;
     margin-bottom: 30px;
 }
 
-.logo img {
-    width: 150px;
-    transition: transform 0.3s;
+.gallery-logos img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    filter: grayscale(100%); /* Preto e white */
+    transition: 0.3s;
 }
 
-.logo img:hover {
+.gallery-logos img:hover {
+    filter: grayscale(0%);
+    border-color: var(--accent-red);
     transform: scale(1.1);
 }
 
-.cards {
+/* ---------------- CARDS (Integrantes e Álbuns) ---------------- */
+.cards-grid {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .card {
-    background: #111;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+    background: #000;
+    border: 1px solid #333;
+    padding: 15px;
     width: 250px;
-    transition: transform 0.4s;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
+    border-color: var(--accent-red);
+}
+
+.image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--accent-red);
 }
 
 .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-family: var(--font-title);
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* ---------------- RODAPÉ ---------------- */
+footer {
     text-align: center;
-    padding: 20px;
-    background: black;
+    padding: 40px;
+    background-color: #000;
+    color: #555;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
 }
 
-/* ANIMAÇÃO */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ============================= */
-/* RESPONSIVIDADE PARA CELULAR  */
-/* ============================= */
-
+/* ---------------- RESPONSIVO ---------------- */
 @media (max-width: 768px) {
-
-    header {
-        padding: 100px 20px;
+    .main-header h1 {
+        font-size: 40px;
     }
-
-    header h1 {
-        font-size: 28px;
+    
+    .section-box {
+        padding: 20px 10px;
     }
-
-    header p {
-        font-size: 16px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    .historia p{
-        font-size: 16px;
-        padding: 0 10px;
-    }
-
-    .logo img {
-        width: 100px;
-    }
-
-    .cards {
+    
+    .cards-grid {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
     }
-
+    
     .card {
-        width: 90%;
-    }
-
-    .card img {
-        width: auto;
-    }
-
-    section {
-        padding: 40px 15px;
+        width: 100%;
     }
 }
